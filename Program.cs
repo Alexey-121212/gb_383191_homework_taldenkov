@@ -1,4 +1,4 @@
-﻿string[] arr = { "1444", "r4rt", "edfgvf", "5544", "4440" };
+﻿string[] arr = { "", "r4rt", "edfgvf", "5544", "4440" };
 
 Console.Clear();
 
@@ -34,7 +34,7 @@ string[] takeArrayElementsLessThreeChar(string[] array)
     string[] arrayNew = new string[0];
     for (int i = 0; i < array.Length; i++)
     {
-        if ((array[i].Length <= 3) && (array[i] != null))
+        if ((array[i].Length <= 3) && (array[i] != ""))
         {
             Array.Resize(ref arrayNew, arrayNew.Length + 1);
             arrayNew[arrayNew.Length - 1] = array[i];
