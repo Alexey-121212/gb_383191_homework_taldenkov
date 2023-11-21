@@ -1,8 +1,10 @@
-﻿string[] arr = { "1", "rrt", "edfgvf", "55", "0" };
+﻿string[] arr = { "1444", "r4rt", "edfgvf", "5544", "4440" };
 
 Console.Clear();
 
 arrayPrint("Исходный масиив", arr);
+
+Console.WriteLine();
 
 arrayPrint("Полученный массив:", takeArrayElementsLessThreeChar(arr));
 
@@ -11,16 +13,33 @@ arrayPrint("Полученный массив:", takeArrayElementsLessThreeChar(
 void arrayPrint(string title, string[] array)
 {
     Console.WriteLine(title);
-    for (int i = 0; i < array.GetLength(0); i++)
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.WriteLine($"Элемент {i} = \"{array[i]}\"");
+        if (i == 0)
+        {
+            Console.Write($"\"{array[i]}\"");
+        }
+        else
+        {
+            Console.Write($"\", {array[i]}\"");
+        }
     }
+    Console.Write("]");
     Console.WriteLine();
 }
 
 string[] takeArrayElementsLessThreeChar(string[] array)
 {
-    string[] arrayNew=array;
+    string[] arrayNew = new string[0];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if ((array[i].Length <= 3) && (array[i] != null))
+        {
+            Array.Resize(ref arrayNew, arrayNew.Length + 1);
+            arrayNew[arrayNew.Length - 1] = array[i];
+        }
+    }
     return arrayNew;
 }
 
