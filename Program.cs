@@ -29,7 +29,7 @@ void arrayPrint(string title, string[] array)
         }
         else
         {
-            Console.Write($"\", {array[i]}\"");
+            Console.Write($", \"{array[i]}\"");
         }
     }
     Console.Write("]");
