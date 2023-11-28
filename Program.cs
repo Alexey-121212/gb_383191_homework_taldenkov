@@ -1,15 +1,22 @@
-﻿string[] arr = { "", "r4rt", "edfgvf", "5544", "4440" };
+﻿// Main programm
+
+// Enter strings to array here
+string[] arr = { "123", "12345", "abc", "ab12", "a", "1", "", "!@#" };
+// samples
+// string[] arr = {"Hello", "2", "world", ":-)"};
+// string[] arr = {"1234", "1567", "-2", "computer science"};
+// string[] arr = {"Russia", "Denmark", "Kazan"};
 
 Console.Clear();
-
 arrayPrint("Исходный масиив", arr);
-
 Console.WriteLine();
-
 arrayPrint("Полученный массив:", takeArrayElementsLessThreeChar(arr));
 
 // Methods
 
+//  Распечатывает массив в формате 
+//  Title:
+//  [e1, e2, .., eN]
 void arrayPrint(string title, string[] array)
 {
     Console.WriteLine(title);
@@ -29,6 +36,7 @@ void arrayPrint(string title, string[] array)
     Console.WriteLine();
 }
 
+//  Возвращает массив, состоящий из элементов массива array, длина которых меньше или равна трем смволам 
 string[] takeArrayElementsLessThreeChar(string[] array)
 {
     string[] arrayNew = new string[0];
@@ -42,8 +50,6 @@ string[] takeArrayElementsLessThreeChar(string[] array)
     }
     return arrayNew;
 }
-
-
 
 
 
